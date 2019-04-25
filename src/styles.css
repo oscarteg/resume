@@ -1,0 +1,78 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Merriweather');
+
+body {
+  @apply text-black subpixel-antialiased font-sans;
+}
+
+a {
+  @apply text-black !important;
+  @apply no-underline !important;
+}
+
+p {
+  @apply text-sm;
+}
+
+.section {
+  @apply text-2xl;
+  @apply font-serif;
+  @apply pb-4;
+  @apply subpixel-antialiased;
+  @apply small-caps;
+}
+
+.paragraph {
+  @apply text-sm;
+  @apply leading-tight;
+  @apply mb-2;
+}
+
+.small-caps {
+  font-variant: small-caps;
+}
+
+.icon-text {
+  @apply ml-1;
+  @apply self-center;
+  @apply text-sm;
+}
+
+.border-t-py-4 {
+  @apply border-grey-darker;
+  @apply border-t;
+  @apply py-4;
+}
+
+@responsive {
+  .right-column {
+    @apply pt-0;
+    @apply border-t-0;
+    @apply border-l;
+    @apply w-2/3;
+    @apply pl-4;
+  }
+}
+
+@media print {
+  .print\:text-5xl{
+    @apply text-5xl;
+  }
+  .print\:flex{
+    @apply flex;
+  }
+  .print\:pr-4{
+    @apply pr-4;
+  }
+  .print\:w-1\/3{
+    @apply w-1/3;
+  }
+  .print\:right-column{
+    @apply right-column;
+  }
+}
