@@ -1,13 +1,7 @@
-@tailwind preflight;
-
-@tailwind components;
-
-@tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css?family=Lora|Merriweather');
+@tailwind base;
 
 body {
-  @apply text-black subpixel-antialiased font-sans;
+  @apply text-black subpixel-antialiased font-sans text-sm;
 }
 
 a {
@@ -18,10 +12,22 @@ a {
 p {
   @apply text-sm;
 }
+ul {
+  @apply list-disc;
+  /* @apply text-sm; */
+  /* @apply ml-4; */
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* @import url("https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap"); */
 
 .section {
   @apply text-2xl;
-  @apply font-serif;
+  /* @apply font-serif font-header; */
+  @apply font-header;
   @apply pb-4;
   @apply subpixel-antialiased;
   @apply small-caps;
@@ -44,7 +50,7 @@ p {
 }
 
 .border-t-py-4 {
-  @apply border-grey-darker;
+  @apply border-gray-700;
   @apply border-t;
   @apply py-4;
 }
@@ -60,19 +66,19 @@ p {
 }
 
 @media print {
-  .print\:text-5xl{
+  .print\:text-5xl {
     @apply text-5xl;
   }
-  .print\:flex{
+  .print\:flex {
     @apply flex;
   }
-  .print\:pr-4{
+  .print\:pr-4 {
     @apply pr-4;
   }
-  .print\:w-1\/3{
+  .print\:w-1\/3 {
     @apply w-1/3;
   }
-  .print\:right-column{
+  .print\:right-column {
     @apply right-column;
   }
 }
