@@ -28,7 +28,7 @@ ul {
   @apply text-2xl;
   /* @apply font-serif font-header; */
   @apply font-header;
-  @apply pb-4;
+  @apply pt-4;
   @apply subpixel-antialiased;
   @apply small-caps;
 }
