@@ -1,7 +1,7 @@
 @tailwind base;
 
 body {
-  @apply text-black subpixel-antialiased font-sans text-sm;
+  @apply text-black antialiased font-body text-sm;
 }
 
 a {
@@ -22,11 +22,11 @@ ul {
 
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Proza+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap");
 
 .section {
   @apply text-2xl;
-  /* @apply font-serif font-header; */
   @apply font-header;
   @apply pt-4;
   @apply subpixel-antialiased;
