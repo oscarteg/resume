@@ -4,6 +4,12 @@ body {
   @apply text-black antialiased font-body text-sm;
 }
 
+h1,
+h2,
+h3 {
+  @apply font-header;
+}
+
 a {
   @apply text-black !important;
   @apply no-underline !important;
@@ -23,7 +29,7 @@ ul {
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css?family=Proza+Libre&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Lora|Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
 
 .section {
   @apply text-2xl;
