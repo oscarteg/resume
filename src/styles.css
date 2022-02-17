@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Proza+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
+
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  @apply text-black antialiased font-body text-sm;
+  @apply text-sm antialiased text-black font-body;
 }
 
 h1,
@@ -23,13 +28,6 @@ ul {
   /* @apply text-sm; */
   /* @apply ml-4; */
 }
-
-@tailwind components;
-
-@tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css?family=Proza+Libre&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
 
 .section {
   @apply text-2xl;
@@ -61,7 +59,7 @@ ul {
   @apply py-4;
 }
 
-@responsive {
+@layer utilities {
   .right-column {
     @apply pt-0;
     @apply border-t-0;

@@ -1,20 +1,15 @@
 {
   "private": true,
+  "source": "src/index.html",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "prod": "cross-env NODE_ENV=production webpack --no-progress"
+    "dev": "parcel",
+    "prod": "parcel build"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.6.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "html-webpack-plugin": "^4.3.0",
-    "postcss": "^7.0.32",
-    "postcss-loader": "^3.0.0",
-    "style-loader": "^1.2.1",
-    "tailwindcss": "^1.4.6",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.3.1",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.23"
   }
 }
