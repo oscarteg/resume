@@ -1,15 +1,16 @@
 {
+  "name": "oscartegiffel-resume",
   "private": true,
-  "source": "src/index.html",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "parcel",
-    "prod": "parcel build"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "parcel": "^2.3.1",
     "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.23",
+    "vite": "^2.8.0"
   }
 }
