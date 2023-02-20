@@ -38,9 +38,7 @@ ul {
 }
 
 .paragraph {
-  @apply text-sm;
-  @apply leading-tight;
-  @apply mb-2;
+  @apply text-sm leading-tight mb-2;
 }
 
 .small-caps {
