@@ -15,6 +15,10 @@ h3 {
   @apply font-header;
 }
 
+ul li {
+  @apply ml-6;
+}
+
 a {
   @apply text-black !important;
   @apply no-underline !important;
