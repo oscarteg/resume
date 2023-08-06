@@ -1,36 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Proza+Libre&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-sm antialiased text-black font-body;
-}
+@layer base {
+  body {
+    @apply text-sm antialiased text-neutral-800 font-body;
+  }
 
-h1,
-h2,
-h3 {
-  @apply font-header;
-}
+  h1,
+  h2,
+  h3 {
+    @apply font-header;
+  }
 
-ul li {
-  @apply ml-6;
-}
+  ul li {
+    @apply ml-6;
+  }
 
-a {
-  @apply text-black !important;
-  @apply no-underline !important;
-}
+  a {
+    @apply text-black !important;
+    @apply no-underline !important;
+  }
 
-p {
-  @apply text-sm;
-}
-ul {
-  @apply list-disc;
-  /* @apply text-sm; */
-  /* @apply ml-4; */
+  p {
+    @apply text-sm;
+  }
+  ul {
+    @apply list-disc;
+    /* @apply text-sm; */
+    /* @apply ml-4; */
+  }
 }
 
 .section {
