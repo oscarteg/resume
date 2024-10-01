@@ -2,213 +2,128 @@
 <html lang="en">
   {{> head}}
 
-  <body class="antialiased print:text-sm">
-    <div class="container mx-auto p-4 mt-4">
-      <section class="mb-8">
-        <section class="text-center flex flex-col items-center">
-          <h1 class="text-3xl md:text-5xl print:text-5xl small-caps">
-            Oscar te Giffel
-          </h1>
-          <a href="https://oscartegiffel.com">https://oscartegiffel.com</a>
-          <img class="rounded-md h-64" src="/img/avatar.webp" />
-        </section>
-      </section>
+  <body class="antialiased print:text-sm bg-gray-100">
+    <div class="container mx-auto p-4 mt-4 bg-white shadow-lg rounded-lg">
+      <header class="mb-8 text-center">
+        <h1 class="text-3xl md:text-5xl print:text-5xl font-bold mb-2">
+          Oscar te Giffel
+        </h1>
+        <p class="text-xl text-gray-600 mb-4">Senior Fullstack Engineer</p>
+        <a
+          href="https://oscartegiffel.com"
+          class="text-blue-600 hover:underline"
+          >https://oscartegiffel.com</a
+        >
+        <div>
+          <p>Read my blog <a href="https://oscartegiffel.com/blog" class="text-blue-600 hover:underline">here</a></p>
+
+
+        </div>
+        <img
+          class="rounded-full h-48 w-48 mx-auto mt-4 border-4 border-gray-300"
+          src="/img/avatar.webp"
+          alt="Oscar te Giffel"
+        />
+
+      </header>
+
       <div class="md:flex print:flex">
-        <div class="md:w-1/3 print:w-1/3">
-          <section class="pb-4 md:pr-4 print:pr-4">
+   <div class="md:flex print:flex">
+        <aside class="md:w-1/3 print:w-1/3 pr-8">
+          <section class="mb-6">
             <h2 class="section">Profile</h2>
-
-            <p class="paragraph">Hey, I’m Oscar.</p>
-            <p class="paragraph">
-              I’m currently working as Senior Frontend Engineer at a medium
-              consultancy agency HeadFWD. I focus on improving companies through
-              process and technology.
-            </p>
-
-            <p class="paragraph">
-              I’m passionate to grow as a developer and not only focus on the
-              technology but also on focussing on building a culture. Connecting
-              and aligning teams is goal and I’m looking for carrying out that
-              goal at each company.
-            </p>
-
-            <p class="paragraph">
-              I love building for the web. I focus on frontend development in
-              React but have done most web parts of webdevelopment. Currently I
-              am focusing on gaining a deeper understanding of Typescript,
-              trying my best at Game Development in low level languages and
-              training my algorithms and datastructures knowledge.
-            </p>
+            <p class="mb-2">Currently working as Senior Fullstack Engineer at DPG.</p>
+            <p class="mb-2">Passionate about developer growth, team culture, and connecting teams.</p>
+            <p class="mb-2">Specializes in React frontend development with full-stack capabilities.</p>
+            <p>Focusing on deepening Typescript knowledge, exploring Game Development, and enhancing algorithms and data structures skills.</p>
           </section>
 
-          <section class="pb-4 md:pr-4 print:pr-4 space-y-2">
+          <section class="mb-6">
             <h2 class="section">Contact</h2>
-            <div class="flex items-center">
-              <i
-                class="fas fa-envelope text-black mr-1"
-                data-fa-transform="shrink-2"
-              ></i>
-              <a class="icon-text" href="mailto:oscar@tegiffel.com"
-                >oscar@tegiffel.com</a
-              >
-            </div>
-            <div class="flex items-center">
-              <i
-                class="fas fa-phone text-black mr-1"
-                data-fa-transform="shrink-3"
-              ></i>
-              <a href="tel:0031652789990" class="icon-text"
-                >+31 6 52 78 99 90</a
-              >
-            </div>
-
-            <div class="flex items-center">
-              <i
-                class="fab fa-linkedin text-black mr-1"
-                data-fa-transform="shrink-1"
-              ></i>
-              <a
-                class="icon-text"
-                href="https://www.linkedin.com/in/otegiffel/"
-                rel="noopener noreferrer"
-                target="_blank"
-                >/in/otegiffel/</a
-              >
-            </div>
-
-            <div class="flex items-center">
-              <i
-                class="fab fa-github-alt text-black mr-1"
-                data-fa-transform="shrink-1"
-              ></i>
-              <a
-                class="icon-text"
-                href="https://github.com/oscarteg"
-                rel="noopener noreferrer"
-                target="_blank"
-                >github.com/oscarteg</a
-              >
-            </div>
-
-            <div class="flex items-center">
-              <i
-                class="fab fa-gitlab text-black mr-1"
-                data-fa-transform="shrink-1"
-              ></i>
-              <a
-                class="icon-text"
-                href="https://gitlab.com/oscarteg"
-                rel="noopener noreferrer"
-                target="_blank"
-                >gitlab.com/oscarteg</a
-              >
-            </div>
-
-            <div class="flex items-center">
-              <i
-                class="fas fa-globe text-black mr-1"
-                data-fa-transform="shrink-1"
-              ></i>
-              <a
-                class="icon-text"
-                href="https://oscartegiffel.com"
-                rel="noopener noreferrer"
-                target="_blank"
-                >oscartegiffel.com</a
-              >
-            </div>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-gray-600 mr-2"></i>
+                <a href="mailto:oscar@tegiffel.com" class="text-blue-600 hover:underline">oscar@tegiffel.com</a>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone text-gray-600 mr-2"></i>
+                <a href="tel:0031652789990" class="text-blue-600 hover:underline">+31 6 52 78 99 90</a>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-linkedin text-gray-600 mr-2"></i>
+                <a href="https://www.linkedin.com/in/otegiffel/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">/in/otegiffel/</a>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-github-alt text-gray-600 mr-2"></i>
+                <a href="https://github.com/oscarteg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">github.com/oscarteg</a>
+              </li>
+              <li class="flex items-center">
+                <i class="fab fa-gitlab text-gray-600 mr-2"></i>
+                <a href="https://gitlab.com/oscarteg" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">gitlab.com/oscarteg</a>
+              </li>
+            </ul>
           </section>
-          <section class="border-t-py-4 md:pr-4 print:pr-4">
+
+          <section class="mb-6">
             <h2 class="section">Skills</h2>
-            <div class="flex mt-2">
-              <div class="w-1/2 mr-1">
-                <p class="font-bold">Languages:</p>
-                <p class="mt-1">
-                  Dutch, English, Japanese (learning N5 planned 2023)
-                </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="font-semibold mb-1">Languages</h3>
+                <p class="mb-2">Dutch, English, Japanese (learning N5 planned 2023)</p>
+                
+                <h3 class="font-semibold mb-1">Programming Languages</h3>
+                <p class="mb-2">JavaScript, TypeScript, Python, Go, Rust, Zig, Java, Kotlin, PHP, NodeJS, (S)CSS/SASS, HTML</p>
+                
+                <h3 class="font-semibold mb-1">Frameworks</h3>
+                <p class="mb-2">React (GatsbyJS, NextJS, Remix), Laravel, Vue.js (NuxtJS), Svelte (SvelteKit), Express, Storybook, NestJS, React Native, AstroJS, Spring</p>
+                
+                <h3 class="font-semibold mb-1">Libraries</h3>
+                <p class="mb-2">TailwindCSS, Ant Design, react-query, Formik, Webpack, xState, Zustand, Redux, Vite, Mui, react-table, react-hook-form, Jest, Vitest, Cypress, Styled Components, Radix, React Testing Library, Apollo</p>
               </div>
-              <div class="w-1/2 mr-1">
-                <p class="font-bold">Programming languages:</p>
-                <p class="mt-1">
-                  JavaScript, TypeScript, Python (Django), Go, Rust, Zig,
-                  (S)CSS/SASS, HTML, Java, NodeJS, Kotlin, Spring, PHP, NodeJS
-                </p>
-              </div>
-            </div>
-            <div class="flex mt-2">
-              <div class="w-1/2 mr-1">
-                <p class="font-bold">Frameworks:</p>
-                <p class="mt-1">
-                  React (GatsbyJS, NextJS, Remix), Laravel, Vue.js (NuxtJS),
-                  Svelte (SvelteKit), Express, Storybook, NestJS,React Native,
-                  AstroJS
-                </p>
-              </div>
-              <div class="w-1/2 ml-1">
-                <p class="font-bold">Tools, services and methods:</p>
-                <p class="mt-1">
-                  Graphql, Kubernetes, Git, Docker, Linux, Vagrant, Ansible,
-                  MySQL, Postgresql, Webpack, CI/CD, Agile, Scrum, Kanban, Jira,
-                  Figma, MySQL, Postgres, MongoDB, GitlabCI, Devops, Gitops,
-                  Domain Driven Design, UML, TDD, DDD, Event Sourcing, CQRS,
-                  Microservices, Serverless, HATEOAS, REST, pnpm/yarn/npm
-                </p>
-              </div>
-            </div>
-            <div class="flex mt-2">
-              <div class="w-1/2 ml-1">
-                <p class="font-bold">Libraries:</p>
-                <p class="mt-1">
-                  TailwindCSS, Ant Design, react-query, Formik, Webpack, xState,
-                  Zustand, Redux, Vite, Formik, Ant Design, Mui, react-table,
-                  react-hook-form, Jest, Vite, Vitest, Cypress, Styled
-                  Components, Radix, React Testing Library, Apollo
-                </p>
+              <div>
+                <h3 class="font-semibold mb-1">Tools &amp; Services</h3>
+                <p class="mb-2">Git, Docker, Linux, Vagrant, Ansible, Webpack, CI/CD, Figma, GitlabCI, pnpm/yarn/npm</p>
+                
+                <h3 class="font-semibold mb-1">Databases</h3>
+                <p class="mb-2">MySQL, PostgreSQL, MongoDB</p>
+                
+                <h3 class="font-semibold mb-1">Cloud &amp; DevOps</h3>
+                <p class="mb-2">Kubernetes, DevOps, GitOps, Serverless</p>
+                
+                <h3 class="font-semibold mb-1">Methodologies</h3>
+                <p class="mb-2">Agile, Scrum, Kanban, Domain Driven Design, Test-Driven Development (TDD), Event Sourcing, CQRS, Microservices</p>
+                
+                <h3 class="font-semibold mb-1">API Design</h3>
+                <p class="mb-2">GraphQL, REST, HATEOAS</p>
+                
+                <h3 class="font-semibold mb-1">Project Management</h3>
+                <p class="mb-2">Jira, UML</p>
               </div>
             </div>
           </section>
-          <section class="border-t-py-4 md:pr-4 print:pr-4">
+
+          <section>
             <h2 class="section">Education</h2>
-            <p class="font-bold mt-2">
-              Bachelor Informatica (Information Technology)
-            </p>
-            <p>University of Applied Sciences Leiden</p>
-            <p class="italic">Mrt. 2019</p>
-            <p>Specialization in <i>Software Engineering</i></p>
-
-            <div class="mt-2">
-              <p class="font-bold">Courses:</p>
-              <ul>
-                <li>
-                  <p>Principal.dev (scheduled Sept 2023)</p>
-
-                  <p>
-                    Advanced training in tech leadership, developing skills in
-                    technical and non-technical areas,
-                  </p>
-                </li>
-
-                <li>
-                  <p>UNLP - Mannenkracht</p>
-                  <p>
-                    MAN training fosters relationships, goals, and fulfillment
-                    across life domains.
-                  </p>
-                </li>
-                <li>Kent C. Dodds - Epic React</li>
-                <li>Kent C. Dodds - Testing Javascript</li>
-                <li>Kent C. Dodds - Advanced React Patterns</li>
-                <li>VueJS Udemy (2017)</li>
-                <li>Laravel Udemy (2017) - Git Workshop Infosupport</li>
+            <div class="mb-4">
+              <h3 class="font-semibold">Bachelor of Information Technology</h3>
+              <p>University of Applied Sciences Leiden</p>
+              <p class="italic">Graduated: March 2019</p>
+              <p>Specialization: Software Engineering</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-1">Professional Development</h3>
+              <ul class="list-disc list-inside">
+                <li>Total TypeScript</li>
+                <li>Principal.dev Leadership Training</li>
+                <li>UNLP - Mannenkracht Personal Development</li>
+                <li>Epic React by Kent C. Dodds</li>
+                <li>Advanced React Patterns</li>
               </ul>
             </div>
           </section>
-        </div>
-        <div
-          class="border-gray-700 border-t pt-4 md:right-column print:right-column"
-        >
-          {{> @partial-block}}
-        </div>
+        </aside>
+
+        <main class="md:w-2/3 print:w-2/3">{{> @partial-block}}</main>
       </div>
     </div>
   </body>

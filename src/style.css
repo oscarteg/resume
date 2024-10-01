@@ -6,87 +6,83 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply text-sm antialiased text-neutral-800 font-body;
-  }
+	body {
+		@apply text-sm antialiased text-neutral-800 font-body;
+	}
 
-  h1,
-  h2,
-  h3 {
-    @apply font-header;
-  }
+	h1,
+	h2,
+	h3 {
+		@apply font-header;
+	}
 
-  ul li {
-    @apply ml-6;
-  }
+	ul li {
+		@apply ml-6;
+	}
 
-  a {
-    @apply text-black !important;
-    @apply no-underline !important;
-  }
+	a {
+		@apply text-black !important;
+		@apply no-underline !important;
+	}
 
-  p {
-    @apply text-sm;
-  }
-  ul {
-    @apply list-disc;
-    /* @apply text-sm; */
-    /* @apply ml-4; */
-  }
+	p {
+		@apply text-sm;
+	}
+	ul {
+		@apply list-disc;
+		/* @apply text-sm; */
+		/* @apply ml-4; */
+	}
 }
 
 .section {
-  @apply text-2xl;
-  @apply font-header;
-  @apply pt-4;
-  @apply subpixel-antialiased;
-  @apply small-caps;
+  @apply text-2xl font-header font-bold mb-3 border-b-2 border-gray-300
 }
 
 .paragraph {
-  @apply text-sm leading-tight mb-2;
+	@apply text-sm leading-tight mb-2;
 }
 
 .small-caps {
-  font-variant: small-caps;
+	font-variant: small-caps;
 }
 
 .icon-text {
-  @apply ml-1;
-  @apply self-center;
-  @apply text-sm;
+	@apply ml-1;
+	@apply self-center;
+	@apply text-sm;
 }
 
 .border-t-py-4 {
-  @apply border-gray-700;
-  @apply border-t;
-  @apply py-4;
+	@apply border-gray-700;
+	@apply border-t;
+	@apply py-4;
 }
 
 @layer utilities {
-  .right-column {
-    @apply pt-0;
-    @apply border-t-0;
-    @apply border-l;
-    @apply w-2/3;
-    @apply pl-4;
-  }
+	.right-column {
+		@apply pt-0;
+		@apply border-t-0;
+		@apply border-l;
+		@apply w-2/3;
+		@apply pl-4;
+	}
 }
 
 @media print {
-  .print\:text-5xl {
-    @apply text-5xl;
-  }
-  .print\:flex {
-    @apply flex;
-  }
-  .print\:pr-4 {
-    @apply pr-4;
-  }
-  .print\:w-1\/3 {
-    @apply w-1/3;
-  }
-  .print\:right-column {
-    @apply right-column;
-  }
+	.print\:text-5xl {
+		@apply text-5xl;
+	}
+	.print\:flex {
+		@apply flex;
+	}
+	.print\:pr-4 {
+		@apply pr-4;
+	}
+	.print\:w-1\/3 {
+		@apply w-1/3;
+	}
+	.print\:right-column {
+		@apply right-column;
+	}
 }
