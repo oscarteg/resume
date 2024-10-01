@@ -11,7 +11,6 @@ export default {
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "index.html"),
-				compact: resolve(__dirname, "compact.html"),
 			},
 		},
 	},
