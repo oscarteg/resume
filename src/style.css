@@ -36,7 +36,7 @@
 }
 
 .section {
-  @apply text-2xl font-header font-bold mb-3 border-b-2 border-gray-300
+	@apply text-2xl font-header font-bold mb-3 border-b-2 border-gray-300;
 }
 
 .paragraph {

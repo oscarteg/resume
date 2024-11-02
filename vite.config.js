@@ -1,5 +1,5 @@
-import handlebars from "vite-plugin-handlebars";
 import { resolve } from "node:path";
+import handlebars from "vite-plugin-handlebars";
 
 export default {
 	plugins: [
