@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Oscar te Giffel · Resume</title>
 <meta name="author" content="Oscar te Giffel">
 <meta name="description" content="Freelance Tech Lead through Createch. Senior frontend at DPG Media. 8+ years shipping React / TypeScript / JVM / DDD systems.">
@@ -38,7 +39,22 @@
   html, body { background: var(--parchment); }
 
   @media screen {
-    body { max-width: 210mm; margin: 0 auto; padding: 11mm 13mm; }
+    body { max-width: 210mm; margin: 0 auto; padding: 11mm 13mm; font-size: 10.5pt; }
+  }
+
+  @media screen and (max-width: 768px) {
+    body { max-width: 100%; padding: 5mm 4mm; font-size: 12pt; }
+    .header { flex-direction: column; align-items: flex-start; gap: 3mm; }
+    .contact { text-align: left; }
+    .metrics { flex-wrap: wrap; gap: 4mm; }
+    .metric { flex: 1 1 45%; }
+    .timeline { flex-direction: column; gap: 3mm; }
+    .convictions, .impact-grid, .os-grid { grid-template-columns: 1fr; gap: 3mm; }
+    .proj-head { flex-wrap: wrap; gap: 1.5mm; }
+    .proj-role { margin-left: 0; }
+    .skill-row { flex-direction: column; gap: 1mm; align-items: flex-start; }
+    .skill-label { width: auto; }
+    .download-btn { top: 10px; right: 10px; padding: 7px 12px; font-size: 10pt; }
   }
 
   body {
@@ -443,11 +459,11 @@
     <div class="proj-lines">
       <div class="proj-row">
         <div class="proj-label">Role</div>
-        <div class="proj-text">Brought in to move DPG's frontend off Vanilla JS onto <strong>React + Next.js</strong>. Large publisher, real traffic, no room for a freeze. Architecture direction + hands-on delivery.</div>
+        <div class="proj-text">Brought in to move DPG's frontend off Vanilla JS onto <strong>React + Next.js</strong>. Pushing the org from <span class="hl">components as a service</span> to <strong>components as a product</strong>. Architecture direction + hands-on delivery.</div>
       </div>
       <div class="proj-row">
         <div class="proj-label">Actions</div>
-        <div class="proj-text">Page-by-page migration instead of big-bang rewrite. Shipped a shared component library. Set up CI/CD. Guided the Next.js cutover. Pushed <strong>Domain-driven design</strong> on the Kotlin services behind it. Paired with juniors — review, not rewrite.</div>
+        <div class="proj-text">Built a <strong>video player component library</strong> end-to-end as the flagship product. Page-by-page migration instead of big-bang rewrite. Set up CI/CD. Guided the Next.js cutover. Pushed <strong>Domain-driven design</strong> on the Kotlin services behind it. Paired with juniors — review, not rewrite.</div>
       </div>
       <div class="proj-row">
         <div class="proj-label">Impact</div>
