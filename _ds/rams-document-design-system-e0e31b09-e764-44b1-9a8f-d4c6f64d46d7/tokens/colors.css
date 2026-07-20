@@ -1,0 +1,76 @@
+/* ============================================================
+   COLORS — Braun / Dieter Rams document palette
+   Warm off-white paper, near-black ink, one restrained orange.
+   Greyscale does the work; the accent is used sparingly.
+   ============================================================ */
+:root {
+  /* --- base neutrals (warm paper stack) --- */
+  --paper: #EFEBE3;          /* page background */
+  --paper-raised: #E8E3D9;   /* cards, code chips, raised fills */
+  --paper-deep: #DEDAD1;     /* device/tray fills */
+
+  --ink: #1B1917;            /* primary text + strong 2px rules */
+  --ink-soft: #33302B;       /* body copy */
+  --muted: #6E6A62;          /* secondary text, roles, captions */
+  --faint: #8A857D;          /* metadata, placeholders */
+
+  --rule: #D4CEC3;           /* hairline rules / dividers */
+  --rule-soft: #E1DCD2;      /* faint inner dividers */
+
+  --on-ink: #EFEBE3;         /* text/marks on ink surfaces */
+
+  /* --- accent (Braun orange) --- */
+  --accent: #DC4B12;
+  --accent-press: #B23A0C;
+  --accent-tint: rgba(220, 75, 18, 0.15); /* status-dot halo */
+
+  /* ============================================================
+     SEMANTIC ALIASES — prefer these in components
+     ============================================================ */
+  --surface-page: var(--paper);
+  --surface-card: var(--paper-raised);
+  --surface-ink: var(--ink);
+
+  --text-heading: var(--ink);
+  --text-body: var(--ink-soft);
+  --text-muted: var(--muted);
+  --text-meta: var(--faint);
+  --text-on-ink: var(--on-ink);
+
+  --border-hairline: var(--rule);
+  --border-soft: var(--rule-soft);
+  --border-strong: var(--ink);
+
+  --accent-fg: var(--accent);
+  --link: var(--accent);
+  --link-hover: var(--accent-press);
+  --marker: var(--accent);      /* the small square / bullet marks */
+}
+
+/* ============================================================
+   DARK THEME — warm charcoal paper, off-white ink, same orange.
+   Only the base neutrals + accent-press are re-pointed; every
+   semantic alias inherits automatically. Apply on any ancestor:
+   <html data-theme="dark"> or <body data-theme="dark">.
+   ============================================================ */
+[data-theme="dark"] {
+  /* warm near-black paper stack (inverse of the light ramp) */
+  --paper: #17140F;          /* page background */
+  --paper-raised: #211E18;   /* cards, code chips, raised fills */
+  --paper-deep: #2A2620;     /* device/tray fills */
+
+  --ink: #EFEBE3;            /* primary text + strong 2px rules */
+  --ink-soft: #D6D1C6;       /* body copy */
+  --muted: #9B968C;          /* secondary text, roles, captions */
+  --faint: #78736A;          /* metadata, placeholders */
+
+  --rule: #37332B;           /* hairline rules / dividers */
+  --rule-soft: #26231D;      /* faint inner dividers */
+
+  --on-ink: #17140F;         /* dark text on the now-light "ink" surface */
+
+  /* accent stays Braun orange; hover LIGHTENS on dark */
+  --accent: #E4571F;
+  --accent-press: #F07038;
+  --accent-tint: rgba(228, 87, 31, 0.18);
+}

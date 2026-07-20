@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><%= it.person.name %> — Resume</title>
+<meta name="description" content="<%= it.profile.lead %>">
+<style><%~ it.css %></style>
+</head>
+<body>
+
+<button type="button" class="download-pdf no-print" onclick="window.print()" aria-label="Download as PDF">Download PDF</button>
+
+<header class="masthead">
+  <div>
+    <h1><%= it.person.name %></h1>
+    <div class="kicker"><%= it.person.title %></div>
+  </div>
+  <div class="contacts">
+    <div><%= it.person.location %></div>
+    <% for (const c of it.person.contacts) { %>
+      <div>
+        <% if (c.href) { %><a href="<%= c.href %>"><%= c.value %></a><% } else { %><%= c.value %><% } %>
+      </div>
+    <% } %>
+  </div>
+</header>
+
+<% const head = (num, label) => `<div class="section-head"><span class="num">${num}</span><span class="label">${label}</span><span class="rule"></span></div>` %>
+
+<section class="profile">
+  <%~ head('01', 'Profile') %>
+  <p class="lead"><%~ it.profile.lead %></p>
+  <p class="body"><%~ it.profile.body %></p>
+</section>
+
+<section>
+  <%~ head('02', 'Skills &amp; Stack') %>
+  <% for (const s of it.skills) { %>
+    <div class="kv-row">
+      <div class="k"><%= s.label %></div>
+      <div class="v"><%~ s.value %></div>
+    </div>
+  <% } %>
+</section>
+
+<section>
+  <%~ head('03', 'Experience') %>
+  <% for (const e of it.experience) { %>
+    <article class="exp">
+      <div class="head">
+        <div class="top">
+          <h3><%= e.company %><% if (e.via) { %><span class="via"><%= e.via %></span><% } %></h3>
+          <span class="period"><%= e.period %></span>
+        </div>
+        <div class="role"><%= e.role %></div>
+        <p class="summary"><%~ e.summary %></p>
+      </div>
+      <% if (e.bullets && e.bullets.length) { %>
+        <ul>
+          <% for (const b of e.bullets) { %>
+            <li><span><%~ b %></span></li>
+          <% } %>
+        </ul>
+      <% } %>
+      <% if (e.stack && e.stack.length) { %>
+        <div class="stack">
+          <% for (const t of e.stack) { %>
+            <span class="chip"><%= t %></span>
+          <% } %>
+        </div>
+      <% } %>
+    </article>
+  <% } %>
+</section>
+
+<section>
+  <%~ head('04', 'Selected Projects') %>
+  <% for (const p of it.projects) { %>
+    <article class="project">
+      <div class="top">
+        <h3><%= p.name %></h3>
+        <span class="stack-meta"><%= p.stack %></span>
+      </div>
+      <p><%~ p.description %></p>
+    </article>
+  <% } %>
+</section>
+
+<section>
+  <%~ head('05', 'Education · Training · Languages') %>
+  <% for (const b of it.education) { %>
+    <div class="kv-row">
+      <div class="k"><%= b.label %></div>
+      <div class="v">
+        <% for (const e of b.entries) { %>
+          <strong><%= e.title %></strong><% if (e.meta) { %><span class="meta"><%= e.meta %></span><% } %>
+        <% } %>
+      </div>
+    </div>
+  <% } %>
+</section>
+
+</body>
+</html>

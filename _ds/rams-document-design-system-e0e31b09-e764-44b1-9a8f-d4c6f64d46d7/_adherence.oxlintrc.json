@@ -1,0 +1,283 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/content/**",
+              "components/core/**",
+              "components/navigation/**",
+              "shadcn/**",
+              "ui_kits/personal-site/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Archivo|Space Mono))/i]",
+        "message": "Font not provided by the design system. Available: Archivo, Space Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|href|onClick|variant|arrow|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, href, onClick, variant, arrow."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:link|ghost|solid)$/]",
+        "message": "<Button> variant must be one of 'link' | 'ghost' | 'solid'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|href|padding|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: children, href, padding."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Kicker'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|color|accent|key|ref|className|style|children)$/]",
+        "message": "<Kicker> doesn't accept that prop. Declared props: children, color, accent."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ListRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:left|title|subtitle|meta|href|lastBorder|key|ref|className|style|children)$/]",
+        "message": "<ListRow> doesn't accept that prop. Declared props: left, title, subtitle, meta, href, lastBorder."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Pipeline'] > JSXAttribute > JSXIdentifier[name!=/^(?:steps|activeIndex|key|ref|className|style|children)$/]",
+        "message": "<Pipeline> doesn't accept that prop. Declared props: steps, activeIndex."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='RailNavItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|href|index|active|key|ref|className|style|children)$/]",
+        "message": "<RailNavItem> doesn't accept that prop. Declared props: label, href, index, active."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeaderAction'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|href|key|ref|className|style|children)$/]",
+        "message": "<SectionHeaderAction> doesn't accept that prop. Declared props: label, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SkillColumn'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|items|key|ref|className|style|children)$/]",
+        "message": "<SkillColumn> doesn't accept that prop. Declared props: title, items."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StatusBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|showDot|key|ref|className|style|children)$/]",
+        "message": "<StatusBadge> doesn't accept that prop. Declared props: label, showDot."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Kicker": {
+        "replaces": []
+      },
+      "ListRow": {
+        "replaces": []
+      },
+      "Pipeline": {
+        "replaces": []
+      },
+      "RailNavItem": {
+        "replaces": []
+      },
+      "SectionHeaderAction": {
+        "replaces": []
+      },
+      "SkillColumn": {
+        "replaces": []
+      },
+      "StatusBadge": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-fg",
+      "--accent-press",
+      "--accent-tint",
+      "--border-hairline",
+      "--border-hairline-w",
+      "--border-soft",
+      "--border-strong",
+      "--border-strong-w",
+      "--content-max",
+      "--dur",
+      "--ease",
+      "--faint",
+      "--font-mono",
+      "--font-sans",
+      "--ink",
+      "--ink-soft",
+      "--link",
+      "--link-hover",
+      "--marker",
+      "--marker-size",
+      "--measure",
+      "--muted",
+      "--on-ink",
+      "--page-max",
+      "--page-pad",
+      "--paper",
+      "--paper-deep",
+      "--paper-raised",
+      "--radius",
+      "--radius-chip",
+      "--rail-gap",
+      "--rail-width",
+      "--rule",
+      "--rule-soft",
+      "--shadow-float",
+      "--space-1",
+      "--space-10",
+      "--space-12",
+      "--space-14",
+      "--space-16",
+      "--space-18",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8",
+      "--surface-card",
+      "--surface-ink",
+      "--surface-page",
+      "--text-body",
+      "--text-body-lg",
+      "--text-display",
+      "--text-h1",
+      "--text-h2",
+      "--text-h3",
+      "--text-heading",
+      "--text-kicker",
+      "--text-lead",
+      "--text-meta",
+      "--text-mono",
+      "--text-mono-sm",
+      "--text-muted",
+      "--text-on-ink",
+      "--text-small",
+      "--track-heading",
+      "--track-kicker",
+      "--track-mono",
+      "--track-tight",
+      "--weight-bold",
+      "--weight-medium",
+      "--weight-regular",
+      "--weight-semibold"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--paper-raised": "color",
+      "--paper-deep": "color",
+      "--ink": "color",
+      "--ink-soft": "color",
+      "--muted": "color",
+      "--faint": "color",
+      "--rule": "color",
+      "--rule-soft": "color",
+      "--on-ink": "color",
+      "--accent": "color",
+      "--accent-press": "color",
+      "--accent-tint": "color",
+      "--surface-page": "color",
+      "--surface-card": "color",
+      "--surface-ink": "color",
+      "--text-heading": "font",
+      "--text-body": "font",
+      "--text-muted": "font",
+      "--text-meta": "font",
+      "--text-on-ink": "font",
+      "--border-hairline": "color",
+      "--border-soft": "color",
+      "--border-strong": "color",
+      "--accent-fg": "color",
+      "--link": "color",
+      "--link-hover": "color",
+      "--marker": "color",
+      "--font-sans": "font",
+      "--font-mono": "font",
+      "--weight-regular": "font",
+      "--weight-medium": "font",
+      "--weight-semibold": "font",
+      "--weight-bold": "font",
+      "--text-display": "font",
+      "--text-h1": "font",
+      "--text-h2": "font",
+      "--text-lead": "font",
+      "--text-h3": "font",
+      "--text-body-lg": "font",
+      "--text-small": "font",
+      "--text-kicker": "font",
+      "--text-mono": "font",
+      "--text-mono-sm": "font",
+      "--track-tight": "spacing",
+      "--track-heading": "spacing",
+      "--track-kicker": "spacing",
+      "--track-mono": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--space-10": "spacing",
+      "--space-12": "spacing",
+      "--space-14": "spacing",
+      "--space-16": "spacing",
+      "--space-18": "spacing",
+      "--page-max": "spacing",
+      "--rail-width": "spacing",
+      "--rail-gap": "spacing",
+      "--page-pad": "spacing",
+      "--content-max": "spacing",
+      "--measure": "spacing",
+      "--border-hairline-w": "spacing",
+      "--border-strong-w": "spacing",
+      "--radius": "radius",
+      "--radius-chip": "radius",
+      "--marker-size": "spacing",
+      "--shadow-float": "shadow",
+      "--ease": "other",
+      "--dur": "other"
+    },
+    "fontFamilies": [
+      "Archivo",
+      "Space Mono"
+    ]
+  }
+}

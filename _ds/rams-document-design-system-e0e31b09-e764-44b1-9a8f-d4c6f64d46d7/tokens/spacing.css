@@ -1,0 +1,44 @@
+/* ============================================================
+   SPACING, LAYOUT, BORDERS
+   The layout is a functional grid: a fixed identity/menu rail
+   beside a flexible content column. Rules (not shadows) divide.
+   ============================================================ */
+:root {
+  /* spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-16: 64px;
+  --space-18: 72px;
+
+  /* layout */
+  --page-max: 1240px;        /* content max width */
+  --rail-width: 300px;       /* identity / menu rail */
+  --rail-gap: 72px;          /* rail → content gap */
+  --page-pad: 52px;          /* outer padding */
+  --content-max: 860px;      /* main reading column cap */
+  --measure: 64ch;           /* body copy line length */
+
+  /* borders */
+  --border-hairline-w: 1px;
+  --border-strong-w: 2px;    /* section rules / active underlines */
+  --radius: 0px;             /* the system is square by default */
+  --radius-chip: 2px;        /* code blocks, subtle chips */
+  --marker-size: 7px;        /* the small orange square */
+
+  /* the system is intentionally shadow-light.
+     Elevation reads through rules and fills, not blur.
+     One soft page-level shadow exists for floating cards: */
+  --shadow-float: 0 24px 60px -30px rgba(0,0,0,0.25);
+
+  /* motion — restrained, no bounce */
+  --ease: cubic-bezier(0.2, 0, 0, 1); /* @kind other */
+  --dur: 140ms; /* @kind other */
+}

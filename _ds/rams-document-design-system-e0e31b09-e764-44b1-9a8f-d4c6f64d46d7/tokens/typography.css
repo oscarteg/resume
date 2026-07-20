@@ -1,0 +1,38 @@
+/* ============================================================
+   TYPOGRAPHY
+   Two families only: a grotesk for everything structural, a
+   monospace for labels / numbers / metadata. No third voice.
+   ============================================================ */
+:root {
+  --font-sans: 'Helvetica Neue', Helvetica, 'Archivo', system-ui, sans-serif;
+  --font-mono: 'Space Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  /* weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* display / headings (grotesk, tight tracking) */
+  --text-display: 700 52px/1.0 var(--font-sans);   /* page titles */
+  --text-h1: 700 44px/1.0 var(--font-sans);
+  --text-h2: 600 22px/1.05 var(--font-sans);
+  --text-lead: 400 26px/1.42 var(--font-sans);     /* intro paragraph */
+  --text-h3: 600 18px/1.15 var(--font-sans);
+
+  /* body */
+  --text-body-lg: 400 16px/1.65 var(--font-sans);
+  --text-body: 400 15px/1.62 var(--font-sans);
+  --text-small: 400 14px/1.6 var(--font-sans);
+
+  /* mono labels — always uppercase w/ wide tracking */
+  --text-kicker: 700 11px/1.2 var(--font-mono);    /* SECTION LABELS */
+  --text-mono: 400 12px/1.5 var(--font-mono);      /* metadata */
+  --text-mono-sm: 400 11px/1.4 var(--font-mono);
+
+  /* tracking */
+  --track-tight: -0.025em;   /* large display */
+  --track-heading: -0.01em;
+  --track-kicker: 0.14em;    /* uppercase mono labels */
+  --track-mono: 0.06em;
+}
